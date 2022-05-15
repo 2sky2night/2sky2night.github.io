@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K的主页</title>
+    <style>
+        body
+        {
+            background-image: linear-gradient(70deg,blue,skyblue,yellow,pink,red);
+            height: 100vh;
+            background-size: 500%;
+            background-position: 0% 0%;
+            animation-name:change;
+            animation-duration: 15s;
+            animation-iteration-count: infinite;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+        @keyframes change {
+            0%
+            {
+                background-position: 0% 0%;
+            }
+            50%
+            {
+                background-position: 100% 100%;
+            }
+            100%
+            {
+                background-position: 0% 0%;
+            }    
+        }
+        body>div
+        {
+            height: 100px;
+            width: 500px;
+            background-color: white;
+            font-weight: 700;
+            text-align: center;
+            line-height: 100px;
+            font-size: 50px;
+            /* filter:blur(.1px) */
+            border-radius: 10px;
+            transition: .5s;
+            margin-bottom: 30px;
+        }
+        body>div:hover
+        {
+            transform: translateY(-10px);
+            box-shadow: 10px 10px 10px rgba(100, 100, 100, 0.29);
+
+        }
+
+        body>span
+        {
+            width: 100px;
+            height: 20px;
+            display: block;
+            cursor: pointer;
+            transition: .3s;
+        }
+        body>span:hover
+        {
+            color: tomato;
+        }
+    </style>
+    <script>
+        function myfunc()
+        {   
+            var get=document.getElementById('deeemo');
+            get.style.fontSize="10px";
+            document.getElementById('deeemo').innerHTML=Date();
+         
+        }
+    </script>
+</head>
+
+<body>
+    <div id="deeemo">
+       欢迎!
+    </div>
+    <span onclick="myfunc()">点击下试试</span>
+</body>
+</html>
